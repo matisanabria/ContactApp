@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/23.0.1"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="org.matisanabria.controllers.NewContactController"
+            prefWidth="400.0" prefHeight="300.0">
+
+    <children>
+        <Label text="Agregar contacto" layoutX="130.0" layoutY="20.0">
+            <font>
+                <Font name="System Bold" size="20.0" />
+            </font>
+        </Label>
+
+        <Separator layoutX="0.0" layoutY="55.0" prefWidth="400.0" />
+
+        <GridPane layoutX="30.0" layoutY="70.0" hgap="10" vgap="15">
+            <columnConstraints>
+                <ColumnConstraints halignment="RIGHT" minWidth="100"/>
+                <ColumnConstraints halignment="LEFT" minWidth="200"/>
+            </columnConstraints>
+
+            <children>
+                <Label text="Nombre y apellido:" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+                <TextField fx:id="nameField" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+
+                <Label text="Nro. de teléfono:" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+                <TextField fx:id="phoneField" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+
+                <Label text="E-Mail:" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+                <TextField fx:id="emailField" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+            </children>
+        </GridPane>
+
+        <HBox spacing="10" alignment="CENTER_RIGHT" layoutX="190.0" layoutY="230.0" prefWidth="180.0">
+            <children>
+                <Button text="Agregar" fx:id="addButton" onAction="#onAdd"/>
+                <Button text="Cancelar" fx:id="cancelButton" onAction="#onCancel"/>
+            </children>
+        </HBox>
+    </children>
+</AnchorPane>

@@ -1,0 +1,6 @@
+#exitButton {
+    -fx-background-color: #e42612;
+    -fx-text-fill: #FFFFFF
+    -fx-border-color: black;
+    -fx-border-width: 10;
+}
