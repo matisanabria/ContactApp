@@ -1,0 +1,18 @@
+# Java build
+/target/
+/build/
+
+# Maven
+!mvnw
+!mvnw.cmd
+!.mvn/
+
+# IntelliJ
+.idea/
+*.iml
+
+# VS Code
+.vscode/
+
+# macOS
+.DS_Store
