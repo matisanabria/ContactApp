@@ -15,30 +15,6 @@ public class ContactService {
         scanner = new Scanner(System.in);
     }
 
-    public void start() {
-        byte opt;
-        do {
-            showMenu();
-            opt = scanner.nextByte();
-
-            switch (opt){
-                case 1 -> listContacts();
-                case 2 -> addContact();
-                case 3 -> deleteContact();
-                case 0 -> System.out.println("\n\n✌ Cerrando app contactos.");
-                default -> System.out.println("❌ Opción inválida");
-            }
-        } while (opt != 0);
-        scanner.close();
-    }
-
-
-    private void showMenu(){
-        System.out.println("📱 ContactApp");
-        System.out.println("\n1. Ver contactos\n2. Agregar\n3. Borrar\n0. Salir\n");
-        System.out.print("-> ");
-    }
-
     public void listContacts(){
         byte index=0; // Suponiendo que no tenga más de 127 contactos, usemos byte para index
         if(contactos.isEmpty()){
